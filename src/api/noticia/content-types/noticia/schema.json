@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "noticias",
+  "info": {
+    "singularName": "noticia",
+    "pluralName": "noticias",
+    "displayName": "Noticia"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titulo"
+    },
+    "contenido": {
+      "type": "blocks"
+    },
+    "resumen": {
+      "type": "text"
+    },
+    "imagenPrincipal": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imagenes": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "fechaPublicacion": {
+      "type": "date"
+    },
+    "categoria": {
+      "type": "enumeration",
+      "enum": [
+        "general",
+        "academiaVitoria",
+        "academiaValencia"
+      ]
+    },
+    "destacada": {
+      "type": "boolean"
+    }
+  }
+}
